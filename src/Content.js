@@ -4,8 +4,8 @@ export default function Content() {
   return (
     <div className="content">
       <div className="write-container">
-        <div className="write-title"></div>
-        <div className="write-content"></div>
+        <input className="write-title"></input>
+        <textarea className="write-content"></textarea>
       </div>
     </div>
   );
