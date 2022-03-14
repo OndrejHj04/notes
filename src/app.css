@@ -41,7 +41,7 @@ body {
   right: 0;
   left: 0;
   position: absolute;
-  background: wheat;
+  background: rgb(221, 176, 176);;
   transform: scaleX(0);
 }
 .title:hover::before {

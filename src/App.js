@@ -10,7 +10,7 @@ export default function App() {
     setNoteList((oldVal) => {
       return [
         ...oldVal,
-        { title: "Title...", content: "Note body...", id: nanoid() },
+        { title: "Title...", content: "Note body...", id: nanoid(), active: false},
       ];
     });
   }
@@ -25,10 +25,21 @@ export default function App() {
     });
   }
 
+  function selectNote(note){
+
+    setNoteList(oldVal=>{
+        oldVal.map(item=>{
+            item.id === note.id ? note.active = true : item.active = false
+        })
+        return oldVal
+    })
+
+  }
+
   return (
     <div className="app">
-      <Sidebar add={addNote} remove={removeNote} noteList={noteList} />
-      <Content />
+      <Sidebar add={addNote} remove={removeNote} noteList={noteList} select={selectNote}/>
+      <Content noteList={noteList} />
     </div>
   );
 }
