@@ -9,9 +9,11 @@ export default function Sidebar() {
             <div className="button"><img src="./trash.png" alt="trash"/></div>
         </div>
       <div className="notes-container">
-        <div className="one-note">
-            <h3>Tady neco pisu</h3>
-        </div>
+        {/* <div className="one-note">
+            <h2 className="note-title">Tady neco pisu</h2>
+            <div className="note-desc">A tady je taky neco</div>
+            <div className="note-words">Pocet slov</div>
+        </div> */}
       </div>
     </div>
   );
