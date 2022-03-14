@@ -1,8 +1,14 @@
 import React from "react";
+import Sidebar from './Sidebar'
+import Content from './Content'
+
 
 export default function App(){
 
     return(
-        <h1>cs</h1>
+        <div className="app">
+            <Sidebar />
+            <Content />
+        </div>
     )
 }
