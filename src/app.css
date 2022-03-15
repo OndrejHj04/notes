@@ -143,6 +143,7 @@ body {
   padding: 5px;
   background: rgb(221, 176, 176);
   border-radius: 10px;
+  z-index: 10;
 }
 .delete img {
   width: 30px;

@@ -10,8 +10,8 @@ export default function Sidebar(props) {
       >
         <h2 className="note-title">{item.title}</h2>
         <div className="note-desc">{item.content}</div>
-        <div className="delete" onClick={() => props.remove(item)}>
-          <img src="./trash.png" alt="trash" />
+        <div className="delete" onClick={(event) => props.remove(item,event)}>
+          <img src="./trash.png" alt="trash" className="trash"/>
         </div>
         <div className="note-words">{item.id}</div>
       </div>
