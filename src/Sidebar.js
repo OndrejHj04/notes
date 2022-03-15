@@ -1,12 +1,13 @@
 import React from "react";
 
 export default function Sidebar(props) {
-
-  console.log('noteList')
-
   const notes = props.noteList.map((item) => {
     return (
-      <div className="one-note" key={item.id} onClick={()=>props.select(item)}>
+      <div
+        className="one-note"
+        key={item.id}
+        onClick={(event) => props.select(item,event)}
+      >
         <h2 className="note-title">{item.title}</h2>
         <div className="note-desc">{item.content}</div>
         <div className="delete" onClick={() => props.remove(item)}>

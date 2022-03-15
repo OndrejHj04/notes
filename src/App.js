@@ -5,12 +5,18 @@ import { nanoid } from "nanoid";
 
 export default function App() {
   const [noteList, setNoteList] = React.useState([]);
+  const [activeNote, setActiveNote] = React.useState()
+
 
   function addNote() {
     setNoteList((oldVal) => {
       return [
         ...oldVal,
-        { title: "Title...", content: "Note body...", id: nanoid(), active: false},
+        {
+          title: "Title...",
+          content: "Note body...",
+          id: nanoid(),
+        },
       ];
     });
   }
@@ -25,20 +31,19 @@ export default function App() {
     });
   }
 
-  function selectNote(note){
-
-    setNoteList(oldVal=>{
-        oldVal.map(item=>{
-            item.id === note.id ? note.active = true : item.active = false
-        })
-        return oldVal
-    })
+  function selectNote(item,event) {
+    console.log(item)
 
   }
 
   return (
     <div className="app">
-      <Sidebar add={addNote} remove={removeNote} noteList={noteList} select={selectNote}/>
+      <Sidebar
+        add={addNote}
+        remove={removeNote}
+        noteList={noteList}
+        select={selectNote}
+      />
       <Content noteList={noteList} />
     </div>
   );
