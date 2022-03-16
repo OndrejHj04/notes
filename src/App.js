@@ -58,7 +58,7 @@ export default function App() {
         noteList={noteList}
         select={selectNote}
       />
-      <Content noteList={noteList} activeNote={activeNote} />
+      {activeNote && <Content noteList={noteList} activeNote={activeNote} />}
     </div>
   );
 }
