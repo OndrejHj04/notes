@@ -91,6 +91,7 @@ body {
   padding: 5px;
   height: 100%;
   width: 75%;
+  text-align: justify;
 }
 .note-words {
   position: absolute;

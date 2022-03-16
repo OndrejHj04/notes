@@ -12,8 +12,8 @@ export default function App() {
       return [
         ...oldVal,
         {
-          title: "Titlesss...",
-          content: "Note bodycko...",
+          title: "Title...",
+          content: "Note body...",
           id: nanoid(),
         },
       ];
@@ -49,8 +49,6 @@ export default function App() {
       }
     }
   }
-
-  console.log(activeNote)
 
   return (
     <div className="app">
